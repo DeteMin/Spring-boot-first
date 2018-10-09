@@ -1,5 +1,5 @@
-logging:
-  pattern:
-    console: "%d - %msg%n"
-  path: e:/
-  file: e:/sell.log
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  path: e:/
+#  file: E:/repository/Spring-boot-sell/log/sell.log
