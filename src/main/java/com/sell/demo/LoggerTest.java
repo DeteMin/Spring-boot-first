@@ -20,6 +20,7 @@ public class LoggerTest {
         log.info("name: {}, passworld: {} ",name,passworld);
         log.debug("debug ...");
         log.error("error ...");
+        log.warn("warn ...");
 
     }
 }
