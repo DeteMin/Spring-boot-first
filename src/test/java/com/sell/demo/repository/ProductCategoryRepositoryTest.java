@@ -1,6 +1,7 @@
 package com.sell.demo.repository;
 
 import com.sell.demo.dataobject.ProductCategory;
+import com.sell.demo.dataobject.ProductCategoryEntity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,16 +22,16 @@ public class ProductCategoryRepositoryTest {
     @Test
     public void findOneTest(){
 
-       Optional<ProductCategory> productCategory =  repository.findById(2);
+        /**使用optional封装可以有效防止产生空指针异常*/
+       Optional<ProductCategoryEntity> productCategory =  repository.findById(1);
        System.out.println(productCategory.toString());
     }
 
     @Test
     public void saveTest(){
-        ProductCategory productCategory =new ProductCategory();
-        productCategory.setCategoryId(2);
-        productCategory.setCategoryName("男生最爱");
-        productCategory.setCategoryType(3);
+        ProductCategoryEntity productCategory =new ProductCategoryEntity();
+        productCategory.setCategoryName("热销榜");
+        productCategory.setCategoryType(4);
         repository.save(productCategory);
     }
 
