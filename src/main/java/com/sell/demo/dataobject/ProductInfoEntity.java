@@ -6,17 +6,18 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
-@Table(name = "product_info", schema = "sell", catalog = "")
+@Table(name = "product_info", schema = "sell")
 public class ProductInfoEntity {
     private String productId;
     private String productName;
     private BigDecimal productPrice;
-    private int productStock;
     private String productDescription;
     private String productIcon;
+    private int productStock;
     private int categoryType;
     private Timestamp createTime;
     private Timestamp updateTime;
+    private int productStatus;
 
     @Id
     @Column(name = "product_id")
@@ -127,5 +128,15 @@ public class ProductInfoEntity {
     @Override
     public int hashCode() {
         return Objects.hash(productId, productName, productPrice, productStock, productDescription, productIcon, categoryType, createTime, updateTime);
+    }
+
+    @Basic
+    @Column(name = "product_status")
+    public int getProductStatus() {
+        return productStatus;
+    }
+
+    public void setProductStatus(int productStatus) {
+        this.productStatus = productStatus;
     }
 }

@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
-@Table(name = "order_master", schema = "sell", catalog = "")
+@Table(name = "order_master", schema = "sell")
 public class OrderMasterEntity {
     private String orderId;
     private String buyerName;
@@ -15,8 +15,8 @@ public class OrderMasterEntity {
 
     private String buyerOpenid;
     private BigDecimal orderAmount;
-    private byte orderStatus;
-    private byte payStatus;
+    private int orderStatus;
+    private int payStatus;
     private Timestamp createTime;
     private Timestamp updateTime;
 
@@ -82,21 +82,21 @@ public class OrderMasterEntity {
 
     @Basic
     @Column(name = "order_status")
-    public byte getOrderStatus() {
+    public int getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(byte orderStatus) {
+    public void setOrderStatus(int orderStatus) {
         this.orderStatus = orderStatus;
     }
 
     @Basic
     @Column(name = "pay_status")
-    public byte getPayStatus() {
+    public int getPayStatus() {
         return payStatus;
     }
 
-    public void setPayStatus(byte payStatus) {
+    public void setPayStatus(int payStatus) {
         this.payStatus = payStatus;
     }
 
