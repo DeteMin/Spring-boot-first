@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -33,6 +34,12 @@ public class ProductCategoryRepositoryTest {
         productCategory.setCategoryName("热销榜");
         productCategory.setCategoryType(4);
         repository.save(productCategory);
+    }
+
+    @Test
+    public void findAllTest(){
+        List<ProductCategoryEntity> list = repository.findAll();
+        System.out.println(list.get(0).toString());
     }
 
 }

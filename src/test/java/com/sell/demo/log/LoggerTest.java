@@ -1,4 +1,4 @@
-package com.sell.demo;
+package com.sell.demo.log;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
