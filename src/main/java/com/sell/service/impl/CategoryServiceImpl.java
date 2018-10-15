@@ -1,12 +1,17 @@
-package com.sell.demo.service.impl;
+package com.sell.service.impl;
 
-import com.sell.demo.dataobject.ProductCategoryEntity;
-import com.sell.demo.repository.ProductCategoryRepository;
-import com.sell.demo.service.CategoryService;
+
+import com.sell.dataobject.ProductCategoryEntity;
+import com.sell.repository.ProductCategoryRepository;
+import com.sell.service.CategoryService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@Slf4j
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired

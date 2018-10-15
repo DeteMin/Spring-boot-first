@@ -1,4 +1,4 @@
-package com.sell.demo.dataobject;
+package com.sell.dataobject;
 
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;

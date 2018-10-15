@@ -1,4 +1,4 @@
-package com.sell.demo.dataobject;
+package com.sell.dataobject;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

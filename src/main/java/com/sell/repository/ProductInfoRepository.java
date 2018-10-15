@@ -1,11 +1,9 @@
-package com.sell.demo.repository;
+package com.sell.repository;
 
-import com.sell.demo.dataobject.ProductInfoEntity;
-import org.springframework.data.domain.Example;
+import com.sell.dataobject.ProductInfoEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ProductInfoRepository extends JpaRepository<ProductInfoEntity,Integer> {
 

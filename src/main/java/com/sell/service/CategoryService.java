@@ -1,6 +1,6 @@
-package com.sell.demo.service;
+package com.sell.service;
 
-import com.sell.demo.dataobject.ProductCategoryEntity;
+import com.sell.dataobject.ProductCategoryEntity;
 
 import java.util.List;
 

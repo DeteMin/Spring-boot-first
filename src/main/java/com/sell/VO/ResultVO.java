@@ -1,5 +1,8 @@
-package com.sell.demo.VO;
+package com.sell.VO;
 
+import lombok.Data;
+
+@Data
 public class ResultVO<T> {
     /**状态码*/
     private Integer code;

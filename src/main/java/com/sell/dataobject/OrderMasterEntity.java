@@ -1,4 +1,4 @@
-package com.sell.demo.dataobject;
+package com.sell.dataobject;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
-@Table(name = "order_master", schema = "sell")
+@Table(name = "order_master", schema = "sell", catalog = "")
 public class OrderMasterEntity {
     private String orderId;
     private String buyerName;
@@ -19,6 +19,14 @@ public class OrderMasterEntity {
     private int payStatus;
     private Timestamp createTime;
     private Timestamp updateTime;
+
+    public void setOrderStatus(byte orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public void setPayStatus(byte payStatus) {
+        this.payStatus = payStatus;
+    }
 
     @Id
     @Column(name = "order_id")
